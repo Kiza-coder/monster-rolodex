@@ -30,7 +30,7 @@ class App extends Component {
 
     render() {
 
-      var {monsters, searchField} = this.state;
+      var { monsters, searchField } = this.state;
       var { onSearchChange } = this;
 
       var filteredMonster = monsters.filter((monster) => {
@@ -39,6 +39,7 @@ class App extends Component {
 
       return (
         <div className="App">
+          <h1 className='app-title'>Roblodex</h1>
           <SearchBox onChangeHandler={onSearchChange} placeholder="search monster..." className="search-box"/>
           <CardList monsters={filteredMonster}/>
         </div>
